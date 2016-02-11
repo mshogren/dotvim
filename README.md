@@ -4,8 +4,6 @@ http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-patho
 ```bash
 git clone http://github.com/mshogren/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
-ln -s ~/.vim/mvimrc ~/.mvimrc
 cd .vim
 git submodule init
 git submodule update
