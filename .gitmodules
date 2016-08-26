@@ -22,3 +22,9 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = http://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/omnisharp"]
+	path = bundle/omnisharp
+	url = https://github.com/OmniSharp/omnisharp-vim.git
+[submodule "bundle/dispatch"]
+	path = bundle/dispatch
+	url = http://github.com/tpope/vim-dispatch.git
