@@ -28,3 +28,6 @@
 [submodule "bundle/dispatch"]
 	path = bundle/dispatch
 	url = http://github.com/tpope/vim-dispatch.git
+[submodule "bundle/syntastic-local-eslint"]
+	path = bundle/syntastic-local-eslint
+	url = http://github.com/mtscout6/syntastic-local-eslint.vim.git
