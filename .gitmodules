@@ -31,3 +31,6 @@
 [submodule "bundle/syntastic-local-eslint"]
 	path = bundle/syntastic-local-eslint
 	url = http://github.com/mtscout6/syntastic-local-eslint.vim.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = http://github.com/Shougo/neocomplete.vim.git
