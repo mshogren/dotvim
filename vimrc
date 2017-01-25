@@ -1,5 +1,7 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+set viminfo='100,<1000,%
+set undofile
 syntax enable
 set background=dark
 colorscheme solarized
