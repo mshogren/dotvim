@@ -29,6 +29,8 @@ highlight SignColumn guibg=black
 " Lightline
 let g:lightline = {
 \ 'colorscheme': 'solarized',
+\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
@@ -37,6 +39,9 @@ let g:lightline = {
 \   'linter_warnings': 'LightlineLinterWarnings',
 \   'linter_errors': 'LightlineLinterErrors',
 \   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_function': {
+\   'readonly': 'LightlineReadonly'
 \ },
 \ 'component_type': {
 \   'readonly': 'error',
@@ -64,6 +69,10 @@ function! LightlineLinterOK() abort
   let l:all_errors = l:counts.error + l:counts.style_error
   let l:all_non_errors = l:counts.total - l:all_errors
   return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+function! LightlineReadonly()
+  return &readonly ? '' : ''
 endfunction
 
 autocmd User ALELint call s:MaybeUpdateLightline()
