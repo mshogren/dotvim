@@ -4,6 +4,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
@@ -12,9 +13,15 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ervandew/supertab'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'will133/vim-dirdiff'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc', { 'do': 'pip3 install neovim' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 call plug#end()
 
 set viminfo='100,<1000,%
+set undodir=~/.vim/undo
 set undofile
 set background=dark
 set laststatus=2
@@ -25,6 +32,8 @@ colorscheme solarized
 
 highlight clear SignColumn
 highlight SignColumn guibg=black
+
+let g:deoplete#enable_at_startup = 1
 
 " Lightline
 let g:lightline = {
