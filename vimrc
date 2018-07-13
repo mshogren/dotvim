@@ -14,6 +14,7 @@ Plug 'ervandew/supertab'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'will133/vim-dirdiff'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc', { 'do': 'pip3 install neovim' }
@@ -34,6 +35,12 @@ highlight clear SignColumn
 highlight SignColumn guibg=black
 
 let g:deoplete#enable_at_startup = 1
+
+let g:OmniSharp_server_path = '/home/ubuntu/omnisharp/omnisharp/OmniSharp.exe'
+let g:OmniSharp_server_use_mono = 1
+let g:OmniSharp_timeout = 3
+let g:OmniSharp_stop_server = 0
+set completeopt=longest,menuone,preview
 
 " Lightline
 let g:lightline = {
