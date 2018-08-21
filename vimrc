@@ -19,6 +19,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc', { 'do': 'pip3 install neovim' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'zchee/deoplete-jedi', { 'do': 'pip3 install neovim jedi' }
 call plug#end()
 
 set viminfo='100,<1000,%
